@@ -1,8 +1,7 @@
 @echo off
 
 md db
-if exist databasess goto start
-goto setup
+
 cls
 title passworteingabe
 goto start
@@ -23,7 +22,7 @@ if %errorlevel% == 2 goto d
 if %errorlevel% == 3 goto a
 if %errorlevel% == 4 goto e
 if %errorlevel% == 5 goto er
-if %errorlevel% == 6 exit
+if %errorlevel% == 6 joscmd
 :createdb
 
 goto start2
@@ -224,9 +223,3 @@ goto fpasswdl
 
 
 
-:setup
-echo ren dbinstall.bat database.bat >> dbsetup.bat
-echo del dbinstall.bat >> dbsetup.bat
-echo del dbsetup.bat >> dbsetup.bat
-echo. >> databasess
-start dbsetup.bat
