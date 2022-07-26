@@ -22,7 +22,7 @@ if %errorlevel% == 2 goto d
 if %errorlevel% == 3 goto a
 if %errorlevel% == 4 goto e
 if %errorlevel% == 5 goto er
-if %errorlevel% == 6 joscmd
+if %errorlevel% == 6 goto exiti
 :createdb
 
 goto start2
@@ -220,6 +220,8 @@ color f4
 timeout 1 >> NUL
 goto fpasswdl
 
-
+:exti
+cd..
+joscmd
 
 
